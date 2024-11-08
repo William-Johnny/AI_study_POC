@@ -1,0 +1,20 @@
+@baseUrl = http://localhost:3000
+
+GET {{baseUrl}}/realisateurs?nom=David%20Fincher
+Authorization: Basic admin password
+
+###
+
+GET {{baseUrl}}/realisateurs?nom=David%20Fincher
+Authorization: Basic wrong password
+
+###
+
+POST {{baseUrl}}/realisateurs
+Content-Type: application/json
+Authorization: Basic admin password
+
+{
+  "nom": "Christopher Nolan",
+  "description": "Réalisateur britannique connu pour ses films à grand spectacle et ses scénarios complexes, comme \"Inception\", \"Interstellar\" et la trilogie \"The Dark Knight\"."
+}
