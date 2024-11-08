@@ -8,7 +8,7 @@ Ce projet explore les capacités et fonctionnalités de l'IA **Claude 3 Opus** d
 - [Installation](#installation)
 - [Installation des modules nécessaires](#installation-des-modules-nécessaires)
 - [Utilisation](#utilisation)
-- [Work](#work)
+- [Travail](#travail)
 
 ## Prérequis
 
@@ -61,7 +61,7 @@ node app.js
 
 Par défaut, le serveur sera accessible à l'adresse http://localhost:3000. Vous pouvez tester les routes disponibles en utilisant le fichier http. Je recommende d'installer l'extension httpYac si vous êtes sur VsCode.
 
-## List of request/answers
+## Travail
 
 ### Request
 Recommande-moi des réalisateur de films dont le travail est similaire à celui de Cristopher Nolan
