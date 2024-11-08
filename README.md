@@ -8,7 +8,7 @@ Ce projet explore les capacités et fonctionnalités de l'IA **Claude 3 Opus** d
 - [Installation](#installation)
 - [Installation des modules nécessaires](#installation-des-modules-nécessaires)
 - [Utilisation](#utilisation)
-- [List of request/answers](#List-of-request/answers)
+- [List of request/answers](#List-of-request-/-answers)
 
 ## Prérequis
 
@@ -28,7 +28,7 @@ Avant de commencer, assurez-vous d'avoir installé les logiciels suivants :
    node -v
    npm -v
 
-Étape 2: Cloner le projet
+2. **Cloner le projet**
 
 Clonez ce dépôt Git sur votre machine locale :
 
