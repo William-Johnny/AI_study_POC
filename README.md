@@ -1,10 +1,72 @@
 # AI study Proof Of Concept
 
-## Request
+Ce projet explore les capacités et fonctionnalités de l'IA **Claude 3 Opus** dans divers cas d'utilisation en traitement du langage naturel (NLP). L'objectif est de créer une application simple en Node.js pour interagir avec l'IA et effectuer des analyses de texte. Voici une liste des requests envoyé à Claude3 Opus. Ces requests n'ont pas été modifié car je les trouve efficace et pertinente. 
 
+## Table des Matières
+
+- [Prérequis](#prérequis)
+- [Installation](#installation)
+- [Installation des modules nécessaires](#installation-des-modules-nécessaires)
+- [Utilisation](#utilisation)
+- [List of request/answers](#List-of-request/answers)
+
+## Prérequis
+
+Avant de commencer, assurez-vous d'avoir installé les logiciels suivants :
+
+- [Node.js](https://nodejs.org/) - Environnement d'exécution pour JavaScript.
+- **Claude 3 Opus API Key** - Pour accéder aux fonctionnalités de Claude, vous aurez besoin d'une clé API (disponible en vous inscrivant auprès du fournisseur).
+
+## Installation
+
+1. **Installer Node.js**  
+   Téléchargez et installez Node.js pour votre système d'exploitation à partir de [nodejs.org](https://nodejs.org/). Node.js comprend également npm (Node Package Manager), qui est utilisé pour installer les modules nécessaires.
+
+   Pour vérifier si Node.js et npm sont installés, exécutez dans le terminal :
+
+   ```bash
+   node -v
+   npm -v
+
+Étape 2: Cloner le projet
+
+Clonez ce dépôt Git sur votre machine locale :
+
+```
+git clone https://github.com/votre-utilisateur/projet-claude3-opus.git
+cd projet-claude3-opus
+```
+
+## Installation des modules nécessaires
+
+Dans le répertoire du projet, installez les modules requis en exécutant la commande suivante :
+
+```
+npm install express body-parser express-basic-auth
+```
+
+Modules utilisés
+
+- Express : pour créer le serveur et gérer les routes.
+- Body-Parser : pour traiter les données JSON et URL encodées des requêtes.
+- Express-Basic-Auth : pour implémenter une authentification de base sur l'API.
+
+## Utilisation
+
+Une fois tous les modules installés, vous pouvez lancer le serveur en exécutant :
+
+```
+node app.js
+```
+
+Par défaut, le serveur sera accessible à l'adresse http://localhost:3000. Vous pouvez tester les routes disponibles en utilisant le fichier http. Je recommende d'installer l'extension httpYac si vous êtes sur VsCode.
+
+## List of request/answers
+
+### Request
 Recommande-moi des réalisateur de films dont le travail est similaire à celui de Cristopher Nolan
 
-## Answer
+### Answer
 
 Voici quelques réalisateurs dont le style et les thèmes abordés peuvent rappeler ceux de Christopher Nolan :
 
@@ -24,11 +86,11 @@ Voici quelques réalisateurs dont le style et les thèmes abordés peuvent rappe
 
 Bien que chacun de ces réalisateurs ait son propre style distinctif, ils partagent avec Nolan une approche créative de la narration, une attention aux détails visuels et une volonté d'explorer des thèmes complexes.
 
-## Request
+### Request
 
 Renvoie-moi la réponse que tu m'as donné sous format JSON
 
-## Answer
+### Answer
 
 {
   "realisateurs": [
@@ -64,7 +126,7 @@ Renvoie-moi la réponse que tu m'as donné sous format JSON
   "conclusion": "Bien que chacun de ces réalisateurs ait son propre style distinctif, ils partagent avec Nolan une approche créative de la narration, une attention aux détails visuels et une volonté d'explorer des thèmes complexes."
 }
 
-## Request
+### Request
 
 Crée une API REST en node.js avec le JSON que tu vient de me donner en respectant les conditions suivantes : 
 - Toutes les routes doivent êtres protégées par un basic auth
@@ -74,9 +136,9 @@ Crée une API REST en node.js avec le JSON que tu vient de me donner en respecta
 -  une route POST qui renvoie un objet correspondant à ce qui a été passé dans le body de la requête
 Ajoute un fichier .http pour tester les routes et s'assurer que l’on obtient une erreur 401 lorsque l’authentification n’est pas bonne
 
-## Answer
+### Answer
 
-### API REST
+#### API REST
 
 ```js
 const express = require('express');
@@ -156,7 +218,7 @@ app.listen(3000, () => {
 
 ```
 
-### HTTP FILE
+#### HTTP FILE
 
 ```http
 GET http://localhost:3000/realisateurs?nom=David%20Fincher
@@ -174,11 +236,11 @@ Content-Type: application/json
 Authorization: Basic admin
 ```
 
-## Request
+### Request
 
 Refactorise les requêtes du fichier .http pour utiliser une variable pour l’hôte des requêtes
 
-## Answer
+### Answer
 
 ```http
 @baseUrl = http://localhost:3000
