@@ -56,7 +56,7 @@ Modules utilisés
 Une fois tous les modules installés, vous pouvez lancer le serveur en exécutant :
 
 ```
-node app.js
+node test.js
 ```
 
 Par défaut, le serveur sera accessible à l'adresse http://localhost:3000. Vous pouvez tester les routes disponibles en utilisant le fichier http. Je recommende d'installer l'extension httpYac si vous êtes sur VsCode.
