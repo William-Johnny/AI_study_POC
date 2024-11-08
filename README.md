@@ -8,7 +8,7 @@ Ce projet explore les capacités et fonctionnalités de l'IA **Claude 3 Opus** d
 - [Installation](#installation)
 - [Installation des modules nécessaires](#installation-des-modules-nécessaires)
 - [Utilisation](#utilisation)
-- [List of request/answers](#List-of-request-/-answers)
+- [List of request/answers](#list-of-request-/-answers)
 
 ## Prérequis
 
